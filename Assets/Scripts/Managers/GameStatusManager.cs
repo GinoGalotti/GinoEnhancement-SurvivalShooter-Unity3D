@@ -14,13 +14,13 @@ public class GameStatusManager : MonoBehaviour {
 	//Game Objects
 	public static GameStatusManager instance = null;
 
-	private Animator anim;
+	private static Animator anim;
 	
 	//Game variables
 	public enum GAME_STATUS {PLAYING, PLAYER_DEAD}
 	public const float RESTART_DELAY = 6f;
 
-	private GAME_STATUS currentStatus;
+	private static GAME_STATUS currentStatus;
 	private float restartTimer;
 	
 	void Start () {
@@ -50,23 +50,23 @@ public class GameStatusManager : MonoBehaviour {
 		}
 	}
 
-	public GAME_STATUS getStatus()
+	public static GAME_STATUS getStatus()
 	{
 		return currentStatus;
 	}
 
-	public void playerDied()
+	public static void playerDied()
 	{
 		currentStatus = GAME_STATUS.PLAYER_DEAD;
 		anim.SetTrigger ("GameOver");
 	}
 
-	public void restartLevel()
+	public static void restartLevel()
 	{
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
-	public bool isPlayingStatus()
+	public static bool isPlayingStatus()
 	{
 		return currentStatus == GAME_STATUS.PLAYING;
 	}

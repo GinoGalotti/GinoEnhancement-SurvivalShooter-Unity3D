@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
 	
 	public void addScore(int pointsToAdd)
 	{
-		if (GameStatusManager.instance.getStatus() == GameStatusManager.GAME_STATUS.PLAYING) 
+		if (GameStatusManager.isPlayingStatus()) 
 		{
 			nextLevelXP = LevelUpManager.instance.getNextXPNeeded ();
 

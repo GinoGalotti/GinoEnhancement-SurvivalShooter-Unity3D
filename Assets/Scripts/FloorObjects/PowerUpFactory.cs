@@ -31,7 +31,7 @@ public class PowerUpFactory : MonoBehaviour {
 	
 	private void Spawn ()
 	{
-		if(GameStatusManager.instance.getStatus() == GameStatusManager.GAME_STATUS.PLAYING)
+		if(GameStatusManager.isPlayingStatus())
 		{
 			if (powerUpSpawns()){
 				if (needShowPowerUpMessage) 

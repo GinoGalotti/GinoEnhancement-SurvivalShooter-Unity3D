@@ -149,7 +149,7 @@ public class PlayerHealth : MonoBehaviour
         playerMovement.enabled = false;
         playerShooting.enabled = false;
 
-		GameStatusManager.instance.playerDied ();
+		GameStatusManager.playerDied();
     }
 
 	public void LevelUpHeal(float delta)

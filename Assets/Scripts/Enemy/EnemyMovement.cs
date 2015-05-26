@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update ()
     {
-		if(enemyHealth.isAlive() && GameStatusManager.instance.isPlayingStatus() && !isEnemyFrozen())
+		if(enemyHealth.isAlive() && GameStatusManager.isPlayingStatus() && !isEnemyFrozen())
         {
 			if (playerVisible()) 
 			{

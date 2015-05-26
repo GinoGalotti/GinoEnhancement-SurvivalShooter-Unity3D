@@ -39,7 +39,7 @@ public class MessagesManager : MonoBehaviour {
 	
 	void Update()
 	{
-		if (GameStatusManager.instance.isPlayingStatus ()) 
+		if (GameStatusManager.isPlayingStatus ()) 
 		{
 			if (remainingDuration > 0) {
 				remainingDuration -= Time.deltaTime;

@@ -53,7 +53,7 @@ public class EnemyAttack : MonoBehaviour
 
     void Update ()
     {
-		if (GameStatusManager.instance.getStatus() == GameStatusManager.GAME_STATUS.PLAYING) {
+		if (GameStatusManager.isPlayingStatus()) {
 			timer += Time.deltaTime;
 		
 			if (playerInRange && enemyHealth.isAlive() && timer >= TIME_BETWEEN_ATTACKS_IN_SECS ) {

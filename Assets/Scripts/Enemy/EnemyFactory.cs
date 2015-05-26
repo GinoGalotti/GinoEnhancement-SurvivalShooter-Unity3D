@@ -24,7 +24,7 @@ public class EnemyFactory : MonoBehaviour
 
     void Spawn ()
     {
-		if(GameStatusManager.instance.getStatus() == GameStatusManager.GAME_STATUS.PLAYING)
+		if(GameStatusManager.isPlayingStatus())
         {
 			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 			

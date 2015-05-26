@@ -59,6 +59,11 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
+	public void playerWantToShot(float deltaTime)
+	{
+
+	}
+
 	private bool playerPressShot()
 	{
 		return Input.GetButton ("Fire1");
@@ -67,7 +72,7 @@ public class PlayerShooting : MonoBehaviour
 	private bool playerCanShot()
 	{
 		float currentShotingCadency = isIncreasedCadencyActive () ? shootingCadency / StatusData.REDUCE_CADENCY_FACTOR : shootingCadency;
-		return timer >= currentShotingCadency && Time.timeScale != 0;
+		return timer >= currentShotingCadency;
 	}
 
 	private bool isIncreasedCadencyActive()
